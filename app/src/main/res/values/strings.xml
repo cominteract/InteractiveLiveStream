@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">InteractiveLiveStreaming</string>
+    <string name="agora_app_id">17397224afa944d18d3b88867ef50834</string>
+    <string name="agora_token">006935eba5556684feca651aebec53b4879IAAHXvqtrwtkIq9kNL1QDSg7Z5n+DDiOBsZd/9MevYqs6cs76aUAAAAAEABwjq6Po2ocYAEAAQCfahxg</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="you_are_watching">You are watching %s</string>
+    <string name="you_are_sending">You are sending as %s</string>
+    <string name="you_are_live">You are live</string>
+    <string name="live">LIVE</string>
+    <string name="send">SEND</string>
+    <string name="live_has_finished">Livestream has finished</string>
+    <string name="logout">Logout</string>
+</resources>

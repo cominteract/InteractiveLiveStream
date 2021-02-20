@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="streamer_name"
+            type="String"/>
+        <variable
+            name="visitor_name"
+            type="String"/>
+        <variable
+            name="stream_chat"
+            type="com.ainsigne.interactivelivestreaming.model.StreamChat"/>
+    </data>
+<androidx.cardview.widget.CardView
+    android:background="@color/black"
+    app:cardBackgroundColor="@android:color/transparent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="5dp"
+    android:translationZ="3dp"
+    android:padding="5dp"
+    >
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@android:color/transparent"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_height="wrap_content" >
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/tv_user_name"
+        app:streamer="@{streamer_name}"
+        app:visitor="@{visitor_name}"
+        android:textStyle="bold"
+        android:layout_margin="3dp"
+        android:textSize="16sp"
+        android:text="@{stream_chat.user}"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_margin="3dp"
+        fromNow="@{stream_chat.dateCreated}"
+        android:id="@+id/tv_sent_date"
+        android:textColor="@android:color/tertiary_text_light"
+        android:textSize="14sp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <TextView
+        app:layout_constraintTop_toBottomOf="@id/tv_user_name"
+        android:id="@+id/tv_chat_message"
+        android:layout_margin="3dp"
+        android:textColor="#e0e0e0"
+        android:text="@{stream_chat.chatMessage}"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
+</layout>

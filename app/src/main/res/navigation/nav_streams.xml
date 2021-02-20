@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/stream_dashboard_fragment">
+
+    <fragment
+        android:id="@+id/onboarding_fragment"
+        android:name="com.ainsigne.interactivelivestreaming.ui.OnboardingFragment"
+        android:label="Welcome"
+        tools:layout="@layout/fragment_onboarding">
+
+        <action
+            android:id="@+id/action_onboarding_to_stream_dashboard"
+            app:destination="@id/stream_dashboard_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/stream_dashboard_fragment"
+        android:name="com.ainsigne.interactivelivestreaming.ui.StreamDashboardFragment"
+        android:label="Streams"
+        tools:layout="@layout/stream_dashboard_fragment">
+
+        <action
+            android:id="@+id/action_stream_dashboard_to_stream_detail"
+            app:destination="@id/stream_detail_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+
+    </fragment>
+
+
+
+
+    <fragment
+        android:id="@+id/stream_detail_fragment"
+        android:name="com.ainsigne.interactivelivestreaming.ui.StreamDetailFragment"
+        android:label="Channel"
+        tools:layout="@layout/stream_detail_fragment">
+
+        <argument
+            android:name="channelId"
+            app:argType="string" />
+        <argument
+            android:name="userToJoin"
+            app:argType="string" />
+        <argument
+            android:name="userToWatch"
+            app:argType="string" />
+        <argument
+            android:name="userId"
+            app:argType="string" />
+        <argument
+            android:name="status"
+            app:argType="boolean" />
+    </fragment>
+
+
+</navigation>
